@@ -1,0 +1,22 @@
+{
+    "name": "vladimir/sql-parser",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Birca Vadim",
+            "email": "vadim.birca@bpay.md"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "SqlParser\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    }
+}
