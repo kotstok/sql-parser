@@ -84,7 +84,7 @@ class AbstractLexer
             throw new InvalidParameterException($sql);
         }
 
-        $tokens = array();
+        $tokens = [];
         $token = "";
 
         $splitLen = $this->getMaxLengthOfTokens();
@@ -95,7 +95,6 @@ class AbstractLexer
             for ($i = $splitLen; $i > 0; $i--) {
                 $substr = substr($sql, $pos, $i);
                 if ($this->isToken($substr)) {
-
                     if ($token !== "") {
                         $tokens[] = $token;
                     }
@@ -136,7 +135,6 @@ class AbstractLexer
         $userdef = false;
 
         while ($i < $cnt) {
-
             if (!isset($tokens[$i])) {
                 $i++;
                 continue;
@@ -169,7 +167,6 @@ class AbstractLexer
         $comment = false;
 
         while ($i < $cnt) {
-
             if (!isset($tokens[$i])) {
                 $i++;
                 continue;
@@ -213,7 +210,6 @@ class AbstractLexer
         $i = 0;
         $cnt = count($tokens);
         while ($i < $cnt) {
-
             if (!isset($tokens[$i])) {
                 $i++;
                 continue;
@@ -238,7 +234,6 @@ class AbstractLexer
         $token_count = count($tokens);
         $i = $idx + 1;
         while ($i < $token_count) {
-
             if (!isset($tokens[$i])) {
                 $i++;
                 continue;
